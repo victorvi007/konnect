@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('avatar')->nullable();
-            $table->string('phone')->unique();
+            $table->string('phone')->unique()->nullable();
             $table->string('email')->unique();
+            $table->string('role')->default('user');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->softDeletes();
