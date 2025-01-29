@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Route::get('/', function () {
-    return ['Laravel' => app()->version()];
+    return [
+        'App Name' => config('app.name'),
+        'Version' => app()->version()
+    ];
 });
 
 
